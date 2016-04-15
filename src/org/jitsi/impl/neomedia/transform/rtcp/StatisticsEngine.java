@@ -351,6 +351,16 @@ public class StatisticsEngine
             catch (IOException e)
             {
             }
+            finally
+            {
+                try
+                {
+                    dataoutputstream.close();
+                }
+                catch (IOException e)
+                {
+                }
+            }
             if (added)
             {
                 pkt.setLength(pkt.getLength() + extendedReportLen);
